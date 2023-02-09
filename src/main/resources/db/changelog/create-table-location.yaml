@@ -1,0 +1,54 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-language-table
+      author: vladimir-slepov
+      changes:
+        - createTable:
+            tableName: location
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: user_id
+                  type: uuid
+              - column:
+                  name: created_on
+                  type: timestamp
+              - column:
+                  name: latitude
+                  type: varchar(256)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: longitude
+                  type: varchar(256)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: add-foreign-location-to-user
+      author: vladimir-slepov
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: user_id
+            baseTableName: location
+            constraintName: fk_user_location
+            referencedColumnNames: user_id
+            referencedTableName: users
+  - changeSet:
+      id: add-user_id-created_on-index
+      author: vladimir-slepov
+      changes:
+        - createIndex:
+            clustered: false
+            columns:
+              - column:
+                  name: user_id
+              - column:
+                  name: created_on
+                  descending: true
+            indexName: idx_user_id_created_on
+            tableName: location
+            unique: false

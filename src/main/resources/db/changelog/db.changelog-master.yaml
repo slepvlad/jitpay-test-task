@@ -2,3 +2,7 @@ databaseChangeLog:
   - include:
       file: create-table-user.yaml
       relativeToChangelogFile: true
+  - include:
+      file: create-table-location.yaml
+      relativeToChangelogFile: true
+

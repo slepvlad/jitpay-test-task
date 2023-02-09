@@ -1,1 +1,7 @@
+spring:
+  jpa:
+    open-in-view: false
+    database: h2
 
+location:
+  max-time-period-in-days: 30
