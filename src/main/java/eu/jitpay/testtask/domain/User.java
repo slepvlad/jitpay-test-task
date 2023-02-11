@@ -1,11 +1,10 @@
 package eu.jitpay.testtask.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -19,4 +18,7 @@ public class User {
     private String email;
     private String firstName;
     private String secondName;
+    @OneToMany
+    @JoinColumn(name = "userId")
+    private List<Location> locations;
 }
