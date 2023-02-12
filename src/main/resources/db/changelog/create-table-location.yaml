@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: add-language-table
+      id: add-location-table
       author: vladimir-slepov
       changes:
         - createTable:
