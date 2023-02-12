@@ -68,7 +68,7 @@ Web app will perform the following operations on this backend:
 
 <p>All endpoints can be seen here <a href="http://localhost:8080/swagger-ui/index.html#/">Swagger</a></p>
 
-<p>Environment variable <b>MAX_TIME_PERIOD_IN_DAYS</b> responsible for time range in method returns users location If this variable missed, default period 30 days will be applied</p>
+<p>Environment variable <b>MAX_TIME_PERIOD_IN_DAYS</b> responsible for time range in method returns users location If this variable is missed, a default period of 30 days will be applied</p>
 
 <h4>Start application</h4>
 ```bash
