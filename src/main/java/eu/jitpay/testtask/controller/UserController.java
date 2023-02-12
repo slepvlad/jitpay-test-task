@@ -2,8 +2,9 @@ package eu.jitpay.testtask.controller;
 
 import eu.jitpay.testtask.dto.user.UpsertUserRequest;
 import eu.jitpay.testtask.dto.user.UpsertUserResponse;
-import eu.jitpay.testtask.dto.user.UserWithLocationDto;
+import eu.jitpay.testtask.dto.user.UserInfo;
 import eu.jitpay.testtask.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +20,11 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping
+    @Operation(
+            summary = "Create or update user",
+            description = "Method creates or update existed user." +
+                    " Email should be unique"
+    )
     public ResponseEntity<UpsertUserResponse> upsertUser(
             @Valid @RequestBody UpsertUserRequest request
     ) {
@@ -26,9 +32,13 @@ public class UserController {
     }
 
     @GetMapping("/{userId}")
-    public ResponseEntity<UserWithLocationDto> getUserDataWithLatestLocation(
+    @Operation(
+            summary = "Get user info with latest location",
+            description = "Get user info with latest location"
+    )
+    public ResponseEntity<UserInfo> getUserInfoWithLatestLocation(
             @PathVariable UUID userId
     ) {
-        return ResponseEntity.of(userService.getUserDataWithLatestLocation(userId));
+        return ResponseEntity.of(userService.getUserInfoWithLatestLocation(userId));
     }
 }

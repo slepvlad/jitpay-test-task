@@ -7,7 +7,7 @@ import java.util.UUID;
 
 @Getter
 @Setter
-public class UserWithLocationDto {
+public class UserInfo {
 
     private UUID userId;
     private String email;

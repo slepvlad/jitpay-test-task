@@ -3,6 +3,7 @@ package eu.jitpay.testtask.controller;
 import eu.jitpay.testtask.dto.user.UserLocationDataRequest;
 import eu.jitpay.testtask.dto.user.UserLocationHistoryDto;
 import eu.jitpay.testtask.service.LocationService;
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -20,6 +21,10 @@ public class LocationController {
     private final LocationService locationService;
 
     @PostMapping
+    @Operation(
+            summary = "Create user's location",
+            description = "Create new user's location. If user doesn't exist, method will return code 400"
+    )
     public ResponseEntity<Void> createUserLocation(
             @Valid @RequestBody UserLocationDataRequest request
     ) {
@@ -28,6 +33,11 @@ public class LocationController {
     }
 
     @GetMapping("/user/{userId}")
+    @Operation(
+            summary = "Get users locations by userId and time range",
+            description = "Return users location by userId and time range." +
+                    " Time range shouldn't be more than 30 days by default"
+    )
     public ResponseEntity<UserLocationHistoryDto> getLocationHistory(
             @PathVariable UUID userId,
             @RequestParam("from") LocalDateTime fromDateTime,
