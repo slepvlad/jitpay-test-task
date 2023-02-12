@@ -2,9 +2,9 @@ package eu.jitpay.testtask.mapper;
 
 import eu.jitpay.testtask.domain.Location;
 import eu.jitpay.testtask.domain.User;
-import eu.jitpay.testtask.dto.user.UpsertUserRequest;
-import eu.jitpay.testtask.dto.user.UpsertUserResponse;
-import eu.jitpay.testtask.dto.user.UserInfo;
+import eu.jitpay.testtask.dto.UpsertUserRequest;
+import eu.jitpay.testtask.dto.UpsertUserResponse;
+import eu.jitpay.testtask.dto.UserInfo;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;

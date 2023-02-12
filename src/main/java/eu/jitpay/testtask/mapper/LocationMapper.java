@@ -1,10 +1,10 @@
 package eu.jitpay.testtask.mapper;
 
 import eu.jitpay.testtask.domain.Location;
-import eu.jitpay.testtask.dto.user.LocationDto;
-import eu.jitpay.testtask.dto.user.LocationInfo;
-import eu.jitpay.testtask.dto.user.UserLocationDataRequest;
-import eu.jitpay.testtask.dto.user.UserLocationHistoryDto;
+import eu.jitpay.testtask.dto.LocationDto;
+import eu.jitpay.testtask.dto.LocationInfo;
+import eu.jitpay.testtask.dto.UserLocationDataRequest;
+import eu.jitpay.testtask.dto.UserLocationHistoryDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;

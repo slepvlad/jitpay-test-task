@@ -1,7 +1,7 @@
 package eu.jitpay.testtask.controller;
 
-import eu.jitpay.testtask.dto.user.UserLocationDataRequest;
-import eu.jitpay.testtask.dto.user.UserLocationHistoryDto;
+import eu.jitpay.testtask.dto.UserLocationDataRequest;
+import eu.jitpay.testtask.dto.UserLocationHistoryDto;
 import eu.jitpay.testtask.service.LocationService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;

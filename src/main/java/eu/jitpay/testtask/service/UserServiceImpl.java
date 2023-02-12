@@ -1,8 +1,8 @@
 package eu.jitpay.testtask.service;
 
-import eu.jitpay.testtask.dto.user.UpsertUserRequest;
-import eu.jitpay.testtask.dto.user.UpsertUserResponse;
-import eu.jitpay.testtask.dto.user.UserInfo;
+import eu.jitpay.testtask.dto.UpsertUserRequest;
+import eu.jitpay.testtask.dto.UpsertUserResponse;
+import eu.jitpay.testtask.dto.UserInfo;
 import eu.jitpay.testtask.mapper.UserMapper;
 import eu.jitpay.testtask.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
