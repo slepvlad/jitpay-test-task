@@ -1,4 +1,4 @@
-package eu.jitpay.testtask.dto.user;
+package eu.jitpay.testtask.dto;
 
 import lombok.Getter;
 import lombok.Setter;

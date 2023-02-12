@@ -1,6 +1,5 @@
-package eu.jitpay.testtask.dto.user;
+package eu.jitpay.testtask.dto;
 
-import eu.jitpay.testtask.domain.Location;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;

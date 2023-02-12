@@ -1,8 +1,8 @@
 package eu.jitpay.testtask.service;
 
 import eu.jitpay.testtask.domain.Location;
-import eu.jitpay.testtask.dto.user.UserLocationDataRequest;
-import eu.jitpay.testtask.dto.user.UserLocationHistoryDto;
+import eu.jitpay.testtask.dto.UserLocationDataRequest;
+import eu.jitpay.testtask.dto.UserLocationHistoryDto;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
