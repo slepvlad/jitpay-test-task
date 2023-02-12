@@ -4,7 +4,7 @@ import eu.jitpay.testtask.domain.Location;
 import eu.jitpay.testtask.domain.User;
 import eu.jitpay.testtask.dto.user.UpsertUserRequest;
 import eu.jitpay.testtask.dto.user.UpsertUserResponse;
-import eu.jitpay.testtask.dto.user.UserWithLocationDto;
+import eu.jitpay.testtask.dto.user.UserInfo;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
@@ -23,5 +23,5 @@ public interface UserMapper {
             @Mapping(target = "userId", source = "user.userId"),
             @Mapping(target = "location", source = "location")
     })
-    UserWithLocationDto mapToUserWithLocationDto(User user, Location location);
+    UserInfo mapToUserWithLocationDto(User user, Location location);
 }

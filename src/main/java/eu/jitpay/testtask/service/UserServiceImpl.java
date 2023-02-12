@@ -2,7 +2,7 @@ package eu.jitpay.testtask.service;
 
 import eu.jitpay.testtask.dto.user.UpsertUserRequest;
 import eu.jitpay.testtask.dto.user.UpsertUserResponse;
-import eu.jitpay.testtask.dto.user.UserWithLocationDto;
+import eu.jitpay.testtask.dto.user.UserInfo;
 import eu.jitpay.testtask.mapper.UserMapper;
 import eu.jitpay.testtask.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public Optional<UserWithLocationDto> getUserDataWithLatestLocation(UUID userId) {
+    public Optional<UserInfo> getUserInfoWithLatestLocation(UUID userId) {
         var location = locationService.getLatestLocation(userId).orElse(null);
         return userRepository.findById(userId)
                 .map(user -> userMapper.mapToUserWithLocationDto(user, location));

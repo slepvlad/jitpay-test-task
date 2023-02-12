@@ -4,4 +4,4 @@ spring:
     database: h2
 
 location:
-  max-time-period-in-days: 30
+  max-time-period-in-days: ${MAX_TIME_PERIOD_IN_DAYS:30}
